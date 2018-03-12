@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+
+span.line {
+    display: inline;
+    white-space: normal;
+    max-width: 100vw;
+    overflow-wrap: break-word;
+}
+span.prompt {
+    white-space: nowrap;
+    overflow-wrap: normal;
+}
+
+#in {
+    opacity: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+#carat {
+    visibility: visible;
+}
+
+div#console {
+    padding: 8px;
+    z-index: 1;
+    position: fixed;
+    width: 100vh;
+    height: 100vw;
+}
+
+div#console-container {
+    height: auto;
+    width: 100%;
+    position: static;
+}
+
+body {
+    color: #00FF00;
+    font-family: "Inconsolata", Consolas;
+}
+
+span.output {
+    display: block;
+    white-space: normal;
+}
