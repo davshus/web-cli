@@ -12,13 +12,26 @@
     <div id="console-container">
         <span class="line">
             <span class="prompt">
-                david@david-home:$
+                david@david-home:/$
             </span>
             <span id="userinput"></span>
             <span id="carat">&block;</span>
         </span>
     </div>
 </div>
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCT-YtRtrlpt58RVfmb5FrzoSzZcQ7AJUQ",
+    authDomain: "computer-sc.firebaseapp.com",
+    databaseURL: "https://computer-sc.firebaseio.com",
+    projectId: "computer-sc",
+    storageBucket: "",
+    messagingSenderId: "139975470679"
+  };
+  firebase.initializeApp(config);
+</script>
 <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
