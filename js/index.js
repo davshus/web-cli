@@ -43,8 +43,8 @@ function nextLine() {
   document.getElementById('in').value = '';
   document.getElementById('carat').parentElement.removeChild(document.getElementById('carat'));
   // document.getElementById('console-container').appendChild(document.createElement('br'));
-
   // document.getElementById('console-container').appendChild(newCarat);
+  document.getElementById('console-container').appendChild(document.createElement('br'));
   document.getElementById('console-container').appendChild(constructLine());
 }
 
@@ -68,6 +68,7 @@ function constructLine() {
 function process(args) {
   var output = document.createElement('span');
   output.className = 'output';
+  // document.getElementById('console-container').appendChild(document.createElement('br'));
   if (args[0] in commands) {
     var stdout = 'ERROR';
     try {
@@ -75,7 +76,7 @@ function process(args) {
     } catch (e) {
       stdout = args[0] + ': ' + e;
     }
-    stdout = htmlify(stdout);
+    stdout = htmlify('\n' + stdout);
     output.innerHTML = stdout;
   } else {
     output.innerHTML = args[0] + ': command not found';
