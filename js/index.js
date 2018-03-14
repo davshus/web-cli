@@ -33,7 +33,9 @@ document.getElementById('in').addEventListener('keydown', function(e) {
   }
   if (e.which == 13) {
     var command = document.getElementById('userinput').innerText;
-    process(command.split(' '));
+    var args = command.split(' ');
+    args[0] = args[0].toLowerCase();
+    process(args);
     nextLine();
   }
 });
